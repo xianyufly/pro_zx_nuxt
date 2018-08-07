@@ -59,7 +59,7 @@
             <i class="fa fa-bars"></i>
             </span>
           </div>
-          <div class="collapse navbar-collapse m-box">
+          <div class="collapse navbar-collapse m-box" id="main-menu">
             <ul class="menu">
               <li v-for="menu in showMenuArray" :class="{'nav-current':path==menu.href}" :key="menu.code"><a :href="menu.href">{{menu.name}}</a></li>
               <li v-if="hideMenuArray.length!=0" @mouseleave="slipIn" @mouseenter.prevent="slipOut">

@@ -6,7 +6,7 @@ module.exports = {
     title: '新闻 生活 资讯信息',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
+      // { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
       { hid: 'description', name: 'description', content: '新闻 生活 资讯信息' }
     ],
     link: [

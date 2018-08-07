@@ -123,6 +123,9 @@ export default {
         let article = data.data["article"];
         article.content = article.content.replace(/data-src/g, "data-init");
         article.content = article.content.replace(/src/g, "_src");
+        article.content = article.content.replace(/<iframe [^>]*_src=[\'\"][^\'\"]+[^>]*>/gi,function(match, capture) {
+           return match.replace("_src","src");
+        });
         function _callback(str){
           article.content=str;
           let result = {
