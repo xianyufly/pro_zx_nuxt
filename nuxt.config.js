@@ -3,11 +3,11 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: '新闻 生活 资讯信息',
+    title: '一起搜模板网',
     meta: [
       { charset: 'utf-8' },
       // { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
-      { hid: 'description', name: 'description', content: '新闻 生活 资讯信息' }
+      { hid: 'description', name: 'description', content: 'Bootstrap模板 免费HTML5模板 免费Bootstrap模板 免费网站特效' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -19,6 +19,7 @@ module.exports = {
   css: [
     // 项目中的 CSS 文件
     '~static/theme/element_#E67E22/index.css',
+    '~static/css/viewer.css',
     '~static/css/screen.css'
   ],
   /*

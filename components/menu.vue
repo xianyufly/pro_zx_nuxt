@@ -129,6 +129,9 @@ export default {
       showMenuArray:function(){
         let showMenuArray=[];
         let start_index=this.start_index;
+        if(this.m_showMenuNum>this.menuArray.length){
+          return this.menuArray
+        }
         if(start_index==-1){
           return showMenuArray;
         }
@@ -141,6 +144,9 @@ export default {
       hideMenuArray:function(){
         let hideMenuArray=[];
         let menuLength=this.menuArray.length;
+        if(this.m_showMenuNum>this.menuArray.length){
+          return hideMenuArray
+        }
         if(this.m_showMenuNum<menuLength){
           for(let i=0;i<this.start_index;i++){
             hideMenuArray.push(this.menuArray[i]);

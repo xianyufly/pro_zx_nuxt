@@ -1,52 +1,29 @@
 <style type="text/css" scoped>
-
-
 </style>
 <template>
   <div>
-    <!-- <v-menu :menuData="menuData"></v-menu> -->
-    <!-- <div class="container">
-      <div class="row">
-        <header class="main-header col-md-12">
-           <el-carousel height="150px">
-              <el-carousel-item v-for="item in 4" :key="item">
-                <h3>{{ item }}</h3>
-              </el-carousel-item>
-            </el-carousel>
-        </header>         
-      </div>
-    </div> -->
     <section class="content-wrap">
       <div class="container">
         <div class="row">
-          <main class="col-md-8 main-content">
-            <article class="post" v-for="article in tableData" :key="article.tid">
-              <div class="clearfix div-flex">
-                <div class="div-flex-1">
-                  <div class="post-head">
-                    <h1 class="post-title one-row-ellipsis"><a :href="'/artDetail/'+article.dirName" target="_blank" >
-                      {{article.title}}
-                    </a></h1>
+          <main class="col-md-12 main-content">
+            <div class="col-md-4" v-for="article in tableData" :key="article.tid">
+              <article class="post" >
+                <div>
+                  <div class="featured-media">
+                    <a :href="'/detail/'+article.dirName" target="_blank"><img :src="article.smallPic==null?img_404:article.smallPic" :alt="article.title"></a>
                   </div>
-                  <div class="post-content">
-                    <p>{{article.memo}}</p>
+                  <div>
+                    <div class="post-head">
+                      <h1 class="post-title one-row-ellipsis"><a :href="'/detail/'+article.dirName" target="_blank" >
+                        {{article.title}}
+                      </a></h1>
+                    </div>
                   </div>
                 </div>
-                <div class="featured-media">
-                  <a :href="'/artDetail/'+article.dirName" target="_blank"><img :src="article.smallPic" :alt="article.title"></a>
-                </div>
-              </div>
-              <div class="post-permalink t-align-right">
-                <div class="post-meta">
-                  <span class="author">来源：<a>{{article.source}}</a></span> •
-                  <time class="post-date">{{article.pubDate}}</time>
-                </div>
-              </div>
-              <footer class="post-footer clearfix t-align-right">
-                <a :href="'/artDetail/'+article.dirName" target="_blank" class="btn btn-default">阅读全文</a>
-              </footer>
-            </article>
-            <nav class="pagination">
+              </article>
+            </div>
+            
+            <nav class="pagination col-md-12">
               <v-pager :total="totals" :current_page="page" :page_size="rows">
               </v-pager>
             </nav>
@@ -58,6 +35,7 @@
   </div>
 </template>
 <script type="text/javascript">
+import img_404 from '~/assets/images/404.gif'
 import index from './services/index.js'
 import pager from '~/components/pager.vue'
 export default {
@@ -66,16 +44,16 @@ export default {
   },
   layout: 'temp_index',
   asyncData({ params, query }, callback) {
-    return index().article_getArticleByPage({
+    return index().bootRes_getBootstrapResByPage({
       page: query.page || 1,
-      rows: query.rows || 5
+      rows: query.rows || 15
     }, function(data) {
       if (data.error = 10000) {
         let result = {
           tableData: data.data["dataRows"],
           totals: data.data["totals"],
           page: query.page || 1,
-          rows: query.rows || 5
+          rows: query.rows || 15
         }
         callback(null, result)
       }
@@ -83,12 +61,9 @@ export default {
   },
   data() {
     return {
-      param: {
-        page: 1,
-        rows: 5
-      },
+      img_404:img_404,
       page: 1,
-      rows: 5,
+      rows: 15,
       tableData: [],
       totals: 0
     }

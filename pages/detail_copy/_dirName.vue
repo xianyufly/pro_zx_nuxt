@@ -1,10 +1,10 @@
 <style type="text/css" >
 #js_content{
-  text-align: center;
+  text-align: center !important;
 }
 
 #js_content *{
-  text-align: center;
+  text-align: center !important;
 }
 
 </style>
@@ -154,7 +154,6 @@ export default {
     let _vue = this;
     _vue.$nextTick(function() {
       //dom已更新
-      console.log($("#js_content img").length)
       $("#js_content img").lazyload({ effect: "fadeIn", data_attribute: "init" });
     })
 

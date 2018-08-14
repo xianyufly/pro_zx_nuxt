@@ -264,6 +264,7 @@ pre {
   padding: 20px;
   background: #ffffff;
   margin-bottom: 20px;
+  height: 300px;
   position: relative;
   overflow: hidden;
 }
@@ -313,12 +314,19 @@ pre {
   white-space: nowrap;
 }
 .post .featured-media {
-  width: 120px;
+  width: 100%;
   margin-left: 10px;
+  text-align: center;
   overflow: hidden;
 }
-.post .featured-media img {
-  height: 120px;
+.post .featured-media-30p{
+  width: 300px;
+  margin-left: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+.post .featured-media img ,.post .featured-media-30p img{
+  width: 100%;
 }
 .post .post-content {
   margin: 30px 0;
@@ -686,20 +694,28 @@ pre {
   background: #ffffff;
   padding: 21px 30px;
 }
+.about-widget-titbox{
+  width: 100%;padding: 21px 30px;
+}
+
+.sidebar .about-widget {
+  background: #ffffff;
+}
 .main-footer .widget {
   padding: 0px 30px;
 }
 .widget {
   margin-bottom: 35px;
 }
-.widget .title {
+.widget .title,.about-widget .title {
   margin-top: 0;
   padding-bottom: 7px;
   border-bottom: 1px solid #ebebeb;
   margin-bottom: 21px;
   position: relative;
 }
-.widget .title:after {
+
+.widget .title:after,.about-widget .title:after {
   content: "";
   width: 90px;
   height: 1px;

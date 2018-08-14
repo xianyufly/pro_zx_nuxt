@@ -46,7 +46,7 @@ export default {
       if(this.c_total==0){
         return pageNumArray;
       }
-      //首页必填加
+      // 首页必填加
       pageNumArray.push({
         page:"1",
         key:1,
@@ -63,21 +63,30 @@ export default {
         })
       }
       let start=2;
-      let temp=parseInt((this.c_show_page_num-1)/2);
+      let countNum=this.c_show_page_num>_pageNum?_pageNum:this.c_show_page_num;
+      let temp=parseInt((countNum-1)/2);
       //计算页数起点
       if(this.c_current_page-temp>1&&this.c_current_page+temp<_pageNum){
         start=this.c_current_page-temp;
       }
       if(this.c_current_page+temp>=_pageNum){
-        start=_pageNum-this.c_show_page_num;
+        if(_pageNum-countNum>0){
+          start=_pageNum-countNum;
+        }
       }
-      for(let i=0;i<this.c_show_page_num;i++){
-        pageNumArray.push({
-          page:start+i+"",
-          class:"number",
-          key:start+i,
-          isLink:true
-        })
+      let pushed_max_num=1;
+      if(_pageNum!=1){
+        for(let i=0;i<countNum;i++){
+          if(start+i<=_pageNum){
+            pageNumArray.push({
+              page:start+i+"",
+              class:"number",
+              key:start+i,
+              isLink:true
+            })
+            pushed_max_num=start+i
+          }
+        }
       }
       //判断是否出现后跨步按钮
       if(_pageNum-this.c_current_page>=(this.c_show_page_num-1)){
@@ -88,13 +97,15 @@ export default {
           isLink:false
         })
       }
-      //末尾页必填加
-      pageNumArray.push({
-        page:""+_pageNum,
-        class:"number",
-        key:_pageNum,
-        isLink:true
-      })
+      if(_pageNum!=pushed_max_num){
+        //末尾页必填加
+        pageNumArray.push({
+          page:""+_pageNum,
+          class:"number",
+          key:_pageNum,
+          isLink:true
+        })
+      }
       for(let item of pageNumArray){
         if(item.page==this.c_current_page){
           item.class="number active";

@@ -23,7 +23,7 @@
               <div class="clearfix div-flex">
                 <div class="div-flex-1">
                   <div class="post-head">
-                    <h1 class="post-title one-row-ellipsis"><a :href="'/artDetail/'+article.dirName" target="_blank" >
+                    <h1 class="post-title one-row-ellipsis"><a :href="'/detail/'+article.dirName" target="_blank" >
                       {{article.title}}
                     </a></h1>
                   </div>
@@ -32,7 +32,7 @@
                   </div>
                 </div>
                 <div class="featured-media">
-                  <a :href="'/artDetail/'+article.dirName" target="_blank"><img :src="article.smallPic" :alt="article.title"></a>
+                  <a :href="'/detail/'+article.dirName" target="_blank"><img :src="article.smallPic" :alt="article.title"></a>
                 </div>
               </div>
               <div class="post-permalink t-align-right">
@@ -42,7 +42,7 @@
                 </div>
               </div>
               <footer class="post-footer clearfix t-align-right">
-                <a :href="'/artDetail/'+article.dirName" target="_blank" class="btn btn-default">阅读全文</a>
+                <a :href="'/detail/'+article.dirName" target="_blank" class="btn btn-default">阅读全文</a>
               </footer>
             </article>
             <nav class="pagination">

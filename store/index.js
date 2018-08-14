@@ -23,13 +23,13 @@ export const actions = {
             name: "首页",
             href: "/"
           }];
-        for (let subject of subjects) {
-            menuArray.push({
-              code:subject.subCode,
-              name:subject.subName,
-              href:"/subject/"+subject.subCode
-            })
-        }
+        // for (let subject of subjects) {
+        //     menuArray.push({
+        //       code:subject.subCode,
+        //       name:subject.subName,
+        //       href:"/subject/"+subject.subCode
+        //     })
+        // }
         commit("menu/initMenuData",menuArray)
       }
     })
