@@ -10,7 +10,7 @@
               <article class="post" >
                 <div>
                   <div class="featured-media">
-                    <a :href="'/detail/'+article.dirName" target="_blank"><img :src="article.smallPic==null?img_404:article.smallPic" :alt="article.title"></a>
+                    <a :href="'/detail/'+article.dirName" target="_blank"><img :src="article.faceUrl==''?img_404:article.faceUrl" :alt="article.title"></a>
                   </div>
                   <div>
                     <div class="post-head">

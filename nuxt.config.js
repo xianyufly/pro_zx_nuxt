@@ -19,8 +19,8 @@ module.exports = {
   css: [
     // 项目中的 CSS 文件
     '~static/theme/element_#E67E22/index.css',
+    '~static/css/screen.css',
     '~static/css/viewer.css',
-    '~static/css/screen.css'
   ],
   /*
   ** Customize the progress bar color
@@ -29,7 +29,7 @@ module.exports = {
   //映入插件
   plugins: [
     //element-ui
-    {src:'~/plugins/vue-element-ui',ssr: false}
+    {src:'~/plugins/vue-element-ui'}
     
   ],
   /*

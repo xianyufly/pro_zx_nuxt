@@ -31,9 +31,9 @@
           <main class="col-md-12 main-content">
             <article class="post div-flex clearfix" >
               <div class="featured-media-30p">
-                <a :href="'/detail/'+article.dirName" target="_blank"><img :src="article.smallPic==null?img_404:article.smallPic" :alt="article.title"></a>
+                <a :href="'/detail/'+article.dirName" target="_blank"><img :src="article.faceUrl==''?img_404:article.faceUrl" :alt="article.title"></a>
               </div>
-              <div class="div-flex-1">
+              <div class="div-flex-1" style="margin-left: 10px;">
                 <div>
                   <div class="post-head">
                     <h1 class="post-title one-row-ellipsis"><a :href="'/detail/'+article.dirName" target="_blank" >
@@ -64,7 +64,7 @@
                       <article class="post" >
                         <div>
                           <div class="featured-media">
-                            <a :href="'/detail/'+article.dirName"><img :src="article.smallPic==null?img_404:article.smallPic" :alt="article.title"></a>
+                            <a :href="'/detail/'+article.dirName"><img :src="article.faceUrl==''?img_404:article.faceUrl" :alt="article.title"></a>
                           </div>
                           <div>
                             <div class="post-head">
@@ -127,11 +127,10 @@ export default {
   },
   mounted() {
     let _vue = this;
-    _vue.$nextTick(function() {
-      //dom已更新
-      console.log($("#js_content img").length)
-      $("#js_content img").lazyload({ effect: "fadeIn", data_attribute: "init" });
-    })
+    // _vue.$nextTick(function() {
+    //   //dom已更新
+    //   $("#js_content img").lazyload({ effect: "fadeIn", data_attribute: "init" });
+    // })
 
   },
   methods: {
