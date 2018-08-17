@@ -22,6 +22,10 @@ export const actions = {
             code: "sy",
             name: "首页",
             href: "/"
+          },{
+            code: "ss",
+            name: "搜索",
+            href: "/search"
           }];
         // for (let subject of subjects) {
         //     menuArray.push({

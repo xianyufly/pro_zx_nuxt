@@ -14,6 +14,17 @@
   position: relative;
   overflow: hidden;
 }
+.marginRT10{
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.marginRT10 a{
+  color: #e6a23c !important;
+}
+
+.height-p100{
+  height: 100% !important;
+}
 </style>
 <template>
   <div>
@@ -29,7 +40,7 @@
       <div class="container">
         <div class="row">
           <main class="col-md-12 main-content">
-            <article class="post div-flex clearfix" >
+            <article class="post div-flex clearfix height-p100" >
               <div class="featured-media-30p">
                 <a :href="'/detail/'+article.dirName" target="_blank"><img :src="article.faceUrl==''?img_404:article.faceUrl" :alt="article.title"></a>
               </div>
@@ -44,6 +55,16 @@
                     <h4>
                       {{article.memo}}
                     </h4>
+                  </div>
+                  <div class="post-content" v-if="tagList.length!=0">
+                    <h4>
+                      标签:
+                    </h4>
+                    <div>
+                      <el-tag v-for="tag in tagList" :key="tag.tid" type="warning" class="marginRT10">
+                        <a :href="'/search?filter='+tag.tid">{{tag.text}}</a>
+                      </el-tag>
+                    </div>
                   </div>
                 </div>
                 <footer class="post-footer clearfix t-align-right">
@@ -106,7 +127,8 @@ export default {
       if (data.error = 10000) {
         let result = {
           article: data.data["res"],
-          aboutArticle:data.data["aboutRes"]
+          aboutArticle:data.data["aboutRes"],
+          tagList: data.data["tagList"]
         }
         callback(null, result)
       }
@@ -122,7 +144,8 @@ export default {
         content: ""
       },
       aboutArticle: [],
-      isDownLoad:false
+      isDownLoad:false,
+      tagList:[]
     }
   },
   mounted() {
