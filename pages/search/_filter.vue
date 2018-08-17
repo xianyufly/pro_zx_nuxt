@@ -151,7 +151,7 @@ export default {
   layout: 'temp_index',
   head () {
     return {
-      title: "一起搜模板-搜索",
+      title: "一起搜模板网-搜索",
       meta: [
         { hid: 'description', name: 'description', content: "一起搜模板 17搜模板" }
       ]

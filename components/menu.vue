@@ -165,7 +165,8 @@ export default {
         //截取 第一个"/" 到 第二个"/" 直接的路径
         let pathArray = this.$route.path.split("/");
         if (pathArray.length > 2) {
-          path = "/"+pathArray[1] + "/" + pathArray[2] ;
+          //path = "/"+pathArray[1] + "/" + pathArray[2] ;
+          path = "/"+pathArray[1] ;
         } else if(pathArray[1]=="") {
           path = "/";
         } else{

@@ -34,6 +34,7 @@ export const actions = {
         //       href:"/subject/"+subject.subCode
         //     })
         // }
+        console.log(menuArray)
         commit("menu/initMenuData",menuArray)
       }
     })
