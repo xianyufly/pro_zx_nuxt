@@ -13,30 +13,39 @@ export const actions = {
   },
   //初始化菜单数据
   initMenuData({ commit }) {
-    return common().subject_getSubjectList({
+    let menuArray = [{
+        code: "sy",
+        name: "首页",
+        href: "/"
+      },{
+        code: "ss",
+        name: "搜索",
+        href: "/search"
+      }];
+    commit("menu/initMenuData",menuArray)
+    // return common().subject_getSubjectList({
 
-    }, function(data) {
-      if (data.error = 10000) {
-        let subjects = data.data["subjects"];
-        let menuArray = [{
-            code: "sy",
-            name: "首页",
-            href: "/"
-          },{
-            code: "ss",
-            name: "搜索",
-            href: "/search"
-          }];
-        // for (let subject of subjects) {
-        //     menuArray.push({
-        //       code:subject.subCode,
-        //       name:subject.subName,
-        //       href:"/subject/"+subject.subCode
-        //     })
-        // }
-        console.log(menuArray)
-        commit("menu/initMenuData",menuArray)
-      }
-    })
+    // }, function(data) {
+    //   if (data.error = 10000) {
+    //     let subjects = data.data["subjects"];
+    //     let menuArray = [{
+    //         code: "sy",
+    //         name: "首页",
+    //         href: "/"
+    //       },{
+    //         code: "ss",
+    //         name: "搜索",
+    //         href: "/search"
+    //       }];
+    //     // for (let subject of subjects) {
+    //     //     menuArray.push({
+    //     //       code:subject.subCode,
+    //     //       name:subject.subName,
+    //     //       href:"/subject/"+subject.subCode
+    //     //     })
+    //     // }
+    //     commit("menu/initMenuData",menuArray)
+    //   }
+    // })
   }
 }

@@ -62,7 +62,7 @@
                     </h4>
                     <div>
                       <el-tag v-for="tag in tagList" :key="tag.tid" type="warning" class="marginRT10">
-                        <a :href="'/search?filter='+tag.tid">{{tag.text}}</a>
+                        <a :href="'/search/a'+tag.tid">{{tag.text}}</a>
                       </el-tag>
                     </div>
                   </div>

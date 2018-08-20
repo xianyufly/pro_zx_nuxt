@@ -125,7 +125,7 @@
             <div v-if="tableData.length==0" class="no-resource sidebar">
               <div class="about-widget" style="padding: 20px;">
                 <div><img :src="img_404"></div>
-                <span class="desc">不存在该类型模板</span>
+                <span class="desc">~想要的模板未找到哦,小搜会尽快收集该类型模板哦~</span>
               </div>
             </div>
             <nav class="pagination col-md-12">
