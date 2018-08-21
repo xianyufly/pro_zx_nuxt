@@ -7,6 +7,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       // { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
+      { hid: 'keywords', name: 'keywords', content: 'Bootstrap模板 后台模板 前端模板' },
       { hid: 'description', name: 'description', content: 'Bootstrap模板 免费HTML5模板 免费Bootstrap模板 免费网站特效' }
     ],
     link: [
