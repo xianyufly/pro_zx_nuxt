@@ -4,6 +4,14 @@
           box-sizing: inherit !important;
   margin: 0;
 }
+@media (max-width: 767px){
+  .hid{
+    display: none !important;
+  }
+}
+.hid{
+    
+}
 </style>
 <template>
   <div>
@@ -18,25 +26,25 @@
                 </div>
               </a>
             </li>
-            <li class="device-mobile">
+            <li class="device-mobile hid">
               <a href="javascript:">
                 <div class="icon-tablet">
                 </div>
               </a>
             </li>
-            <li class="device-mobile">
+            <li class="device-mobile hid">
               <a href="javascript:">
                 <div class="icon-mobile-1">
                 </div>
               </a>
             </li>
-            <li class="device-mobile-2">
+            <li class="device-mobile-2 hid">
               <a href="javascript:">
                 <div class="icon-mobile-2">
                 </div>
               </a>
             </li>
-            <li class="device-mobile-3">
+            <li class="device-mobile-3 hid">
               <a href="javascript:">
                 <div class="icon-mobile-3">
                 </div>

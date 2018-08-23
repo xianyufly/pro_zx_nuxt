@@ -615,6 +615,8 @@ pre {
   margin: 0 0 35px;
   text-align: center;
   display: block;
+  width: 100%;
+  overflow: hidden;
 }
 .pagination a {
   text-align: center;
@@ -939,6 +941,7 @@ pre {
 .div-flex{
   display: flex;
   flex-direction:row;
+  flex-wrap: wrap;
 }
 .div-flex-1{
   flex: 1 0 auto;

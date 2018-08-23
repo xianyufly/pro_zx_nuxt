@@ -85,13 +85,13 @@
                 <div class="container">
                   <div class="search-box">
                     <div class="text">你的选择:</div>
-                    <div>
+                    <div class="div-flex">
                       <el-tag @close="clearTag(tag)" v-for="tag in selectTag" :key="tag.tid" closable type="warning" hit size="mini" class="marginRT10">{{tag.text}}</el-tag>
                     </div>
                   </div>
                   <div class="search-box" v-for="tag in tagList" :key="tag.tid">
                     <div class="text">{{tag.text}}:</div>
-                    <div>
+                    <div class="div-flex">
                       <a onclick="return false;" @click.prevent.stop="search(item)" :href="'/search/'+item.tid" v-for="item in tag.children" :key="item.tid">
                         <span :class='{"tag-normal":item.isActive==false,"marginRT10":true,"el-tag--mini":true,"el-tag el-tag--warning is-hit":item.isActive==true}'>
                           {{item.text}}

@@ -11,6 +11,17 @@
         <b v-if="n.page==c_current_page" >{{n.page}}</b>
       </li>
     </ul>
+    <ul class="el-pager-mobile">
+      <li class="number" v-if="c_current_page!=1">
+        <b>...</b>
+      </li>
+      <li class="number active">
+        <b>{{c_current_page}}</b>
+      </li>
+      <li class="number" v-if="c_current_page!=totalPageNum">
+        <b>...</b>
+      </li>
+    </ul>
     <button @click="next" type="button" :disabled="c_current_page==totalPageNum" class="btn-next">
       <i class="el-icon el-icon-arrow-right"></i>
     </button>
@@ -158,18 +169,53 @@ export default {
 
 </script>
 <style lang="css">
-  .el-pager a
+  @media (max-width: 767px){
+    .el-pager{
+      display: none;
+    }
+    .el-pager-mobile{
+      display: inline-block !important;
+    }
+  }
+  .el-pager-mobile{
+    display: none;
+  }
+  .el-pager-mobile li {
+    vertical-align: top;
+    margin: 0;
+    display: inline-block;
+}
+  .el-pager-mobile li {
+      padding: 0 4px;
+      background: #fff;
+      font-size: 13px;
+      min-width: 35.5px;
+      height: 28px;
+      line-height: 28px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 0 5px;
+      background-color: #ffffff;
+      color: #606266;
+      min-width: 30px;
+      border-radius: 2px;
+  }
+  .el-pager-mobile li:not(.disabled).active {
+    background-color: #E67E22;
+    color: #fff;
+  }
+  .el-pager a,.el-pager-mobile a
   {
     color: #606266 !important;
     background: #ffffff; 
     width: 100%;
     text-decoration: none !important;
   }
-  .el-pager a.active{
+  .el-pager a.active,.el-pager-mobile a.active{
     background: none !important;
     color: #fff !important;
   }
-  .el-pager a:hover{
+  .el-pager a:hover,.el-pager-mobile a:hover{
     color:#e67e22 !important;
   }
 </style>
