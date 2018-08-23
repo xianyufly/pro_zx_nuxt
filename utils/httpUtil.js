@@ -12,7 +12,7 @@ export default function() {
   if (process.env.PATH_TYPE === 'local') {
     apiUrl = "http://localhost:12001/";
   } else {
-    apiUrl = 'http://api.17sobt.com/';
+    apiUrl = 'https://api.17sobt.com/';
   }
   axios.defaults.withCredentials = true;
   axios.defaults.headers.post['Content-Type'] = 'application/json; charset=UTF-8';

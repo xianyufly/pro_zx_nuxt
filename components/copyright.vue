@@ -4,7 +4,7 @@
 	        <div class="row">
 	            <div class="col-sm-12 lineH">
 	                <span>Copyright © <a href="http://www.17sobt.com/">一起搜模板网</a></span> | 
-	                <span><a href="http://www.miibeian.gov.cn/" target="_blank">闽ICP备18018697号</a></span> | 
+	                <span><a href="http://www.17sobt.com/" target="_blank">闽ICP备18018697号</a></span> | 
 	                <span>闽ICP备18018697号</span>
 	            </div>
 	            <div class="col-sm-12 lineH">
@@ -40,6 +40,9 @@ export default {
 <style lang="css">
 .lineH{
 	line-height: 30px;
+}
+.copyright span,.copyright a{
+	color:rgba(255, 255, 255, 0.7) !important;
 }
 
 </style>

@@ -48,7 +48,7 @@
     <div class="container">
       <div class="logo div-f-left">
         <!-- start logo -->
-        <a class="branding" href="http://www.17sobt.com"><img src="~/assets/images/logo.png" ></a>
+        <a class="branding" href="http://www.17sobt.com"><img alt="一起搜模板网logo" src="~/assets/images/logo.png" ></a>
         <!-- end logo -->
       </div>
       <div class="row div-f-left">
