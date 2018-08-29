@@ -65,9 +65,10 @@ import artDetail from './services/artDetail.js'
 export default {
   head() {
     return {
-      title: this.article.title+"预览",
+      title: this.article.title+"预览_一起搜模板网",
       meta: [
-        { hid: 'description', name: 'description', content: "一起搜模板网预览页面" }
+        { hid: 'keywords', name: 'keywords', content:"Bootstrap模板,后台模板,前端模板,html5模板,淘宝商城模板" },
+        { hid: 'description', name: 'description', content: "免费预览Bootstrap模板,后台模板,前端模板,html5模板,淘宝商城模板" }
       ]
     }
   },

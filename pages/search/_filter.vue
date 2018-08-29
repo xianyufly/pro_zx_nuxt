@@ -92,7 +92,7 @@
                   <div class="search-box" v-for="tag in tagList" :key="tag.tid">
                     <div class="text">{{tag.text}}:</div>
                     <div class="div-flex">
-                      <a onclick="return false;" @click.prevent.stop="search(item)" :href="'/search/'+item.tid" v-for="item in tag.children" :key="item.tid">
+                      <a :title="item.text" onclick="return false;" @click.prevent.stop="search(item)" :href="'/search/'+item.tid" v-for="item in tag.children" :key="item.tid">
                         <span :class='{"tag-normal":item.isActive==false,"marginRT10":true,"el-tag--mini":true,"el-tag el-tag--warning is-hit":item.isActive==true}'>
                           {{item.text}}
                           <i @click.prevent.stop="clearTag(item)" v-if="item.isActive==true" class="el-tag__close el-icon-close"></i>
@@ -110,11 +110,11 @@
               <article class="post" >
                 <div>
                   <div class="featured-media">
-                    <a :href="'/detail/'+article.dirName" target="_blank"><img :src="article.faceUrl==''?img_404:article.faceUrl" :alt="article.title"></a>
+                    <a :title="article.title" :href="'/detail/'+article.dirName" target="_blank"><img :src="article.faceUrl==''?img_404:article.faceUrl" :alt="article.title"></a>
                   </div>
                   <div>
                     <div class="post-head">
-                      <h1 class="post-title one-row-ellipsis"><a :href="'/detail/'+article.dirName" target="_blank" >
+                      <h1 class="post-title one-row-ellipsis"><a :title="article.title" :href="'/detail/'+article.dirName" target="_blank" >
                         {{article.title}}
                       </a></h1>
                     </div>
@@ -151,9 +151,10 @@ export default {
   layout: 'temp_index',
   head () {
     return {
-      title: "一起搜模板网-搜索",
+      title: "搜索_一起搜模板网",
       meta: [
-        { hid: 'description', name: 'description', content: "一起搜模板 17搜模板" }
+        { hid: 'keywords', name: 'keywords', content:"Bootstrap模板,后台模板,前端模板,html5模板,淘宝商城模板" },
+        { hid: 'description', name: 'description', content:"免费下载Bootstrap模板,后台模板,前端模板,html5模板,淘宝商城模板" }
       ]
     }
   },

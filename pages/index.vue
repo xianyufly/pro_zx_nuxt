@@ -10,11 +10,11 @@
               <article class="post" >
                 <div>
                   <div class="featured-media">
-                    <a :href="'/detail/'+article.dirName" target="_blank"><img :src="article.faceUrl==''?img_404:article.faceUrl" :alt="article.title"></a>
+                    <a :href="'/detail/'+article.dirName" :title="article.title" target="_blank"><img :src="article.faceUrl==''?img_404:article.faceUrl" :alt="article.title"></a>
                   </div>
                   <div>
                     <div class="post-head">
-                      <h1 class="post-title one-row-ellipsis"><a :href="'/detail/'+article.dirName" target="_blank" >
+                      <h1 class="post-title one-row-ellipsis"><a :title="article.title" :href="'/detail/'+article.dirName" target="_blank" >
                         {{article.title}}
                       </a></h1>
                     </div>

@@ -3,12 +3,12 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: '一起搜模板网',
+    title: '一起搜模板网_Bootstrap模板,后台模板,前端模板,html5模板,淘宝商城模板',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
-      { hid: 'keywords', name: 'keywords', content: 'Bootstrap模板 后台模板 前端模板' },
-      { hid: 'description', name: 'description', content: 'Bootstrap模板 免费HTML5模板 免费Bootstrap模板 免费网站特效' }
+      { hid: 'keywords', name: 'keywords', content: 'Bootstrap模板,后台模板,前端模板,html5模板,淘宝商城模板' },
+      { hid: 'description', name: 'description', content: '免费下载Bootstrap模板,后台模板,前端模板,html5模板,淘宝商城模板' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -31,7 +31,6 @@ module.exports = {
   plugins: [
     //element-ui
     {src:'~/plugins/vue-element-ui'}
-    
   ],
   /*
   ** Build configuration
