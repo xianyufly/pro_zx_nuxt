@@ -4,8 +4,8 @@
 	        <div class="row">
 	            <div class="col-sm-12 lineH">
 	                <span>Copyright © <a href="http://www.17sobt.com/">一起搜模板网</a></span> | 
-	                <span><a href="http://www.17sobt.com/" target="_blank">闽ICP备18018697号</a></span> | 
-	                <span>闽ICP备18018697号</span>
+	                <span><a href="http://www.miitbeian.gov.cn/" target="_blank">闽ICP备18018697号</a></span> | 
+	                <span><a href="http://www.miitbeian.gov.cn/" target="_blank">闽ICP备18018697号</a></span>
 	            </div>
 	            <div class="col-sm-12 lineH">
 	                <span>广告投放合作:<a href="http://wpa.qq.com/msgrd?v=3&uin=1187383721&site=qq&menu=yes" target="_blank">1187383721</a></span> | 

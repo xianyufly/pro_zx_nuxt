@@ -1,3 +1,4 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 module.exports = {
   /*
   ** Headers of the page
@@ -11,7 +12,10 @@ module.exports = {
       { hid: 'description', name: 'description', content: '免费下载Bootstrap模板,后台模板,前端模板,html5模板,淘宝商城模板' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: '/theme/element_E67E22/index.css' },
+      { rel: 'stylesheet', href: '/css/screen.css' },
+      { rel: 'stylesheet', href: '/css/viewer.css' },
     ]
   },
   env: {
@@ -19,9 +23,9 @@ module.exports = {
   },
   css: [
     // 项目中的 CSS 文件
-    '~static/theme/element_#E67E22/index.css',
-    '~static/css/screen.css',
-    '~static/css/viewer.css',
+    // '~static/theme/element_#E67E22/index.css',
+    // '~static/css/screen.css',
+    // '~static/css/viewer.css',
   ],
   /*
   ** Customize the progress bar color
@@ -45,10 +49,23 @@ module.exports = {
       //element-ui
       '~/plugins/vue-element-ui'
     ],
+    plugins: [
+      new ExtractTextPlugin({
+        filename:"style.css",
+        allChunks:true
+      })
+    ],
+    loaders: [{
+          test: /\.css$/,
+          use: ExtractTextPlugin.extract({
+            fallback: "style-loader",
+            use: "css-loader"
+          })
+    }],
     /*
     ** Run ESLint on save
     */
-    extend (config, { isDev, isClient }) {
+    extend (config, { isDev, isClient , isServer}) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',

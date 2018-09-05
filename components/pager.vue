@@ -187,7 +187,7 @@ export default {
 }
   .el-pager-mobile li {
       padding: 0 4px;
-      background: #fff;
+      background: #fff !important;
       font-size: 13px;
       min-width: 35.5px;
       height: 28px;
@@ -195,14 +195,14 @@ export default {
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin: 0 5px;
-      background-color: #ffffff;
-      color: #606266;
+      background-color: #ffffff !important;
+      color: #606266 !important; 
       min-width: 30px;
       border-radius: 2px;
   }
   .el-pager-mobile li:not(.disabled).active {
-    background-color: #E67E22;
-    color: #fff;
+    background-color: #E67E22 !important;
+    color: #fff !important;
   }
   .el-pager a,.el-pager-mobile a
   {
